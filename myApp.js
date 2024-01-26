@@ -1,10 +1,10 @@
 let express = require('express');
 let app = express();
 
-app.get('/your-app-url/json', (req, res) => {
-    
+app.get('/:word/echo', (req, res) => {
+    const word= req.params.word;
 
-    res.json({message: "Hello json"});
+    res.json({echo: word});
 });
 
 
