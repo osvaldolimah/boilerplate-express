@@ -27,6 +27,23 @@ app.get("/name", (req, res) => {
 
 */
 
+/* Questão 11 
+
+Primeiro: Configurar o middleware 
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+app.post("/name", (req, res) => {
+  var osvaldo = req.body.first;
+  var holanda = req.body.last;
+  var {first: osvaldo, last: holanda} = req.body
+
+  res.json({name: `${osvaldo} ${holanda}` })
+});
+
+*/
+
 
 
 
