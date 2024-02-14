@@ -5,22 +5,28 @@ require('dotenv').config();
 
 
 
+/* Questão 9 
+app.get('/now', (req, res, next) => {
+    const agora = new Date().toString();
+    req.time = agora;
+    next();
+  }, (req, res) => {
+    res.json({"time": req.time})
+  });
+*/
 
-app.use(bodyParser.urlencoded({extended: false}))
-app.get('/json', (req, res) => {
+/* Questão 10 
 
-    const MESSAGE_STYLE = process.env.MESSAGE_STYLE;
+app.get("/name", (req, res) => {
+  var osvaldo = req.query.first;
+  var holanda = req.query.last;
+  var {first: osvaldo, last: holanda} = req.query
 
-    
-
-    
-    if (MESSAGE_STYLE === "uppercase") {
-        message = "Hello json".toUpperCase();
-    } else {
-        message = "Hello json";
-    }
-        res.json({"message": message});
+  res.json({name: `${osvaldo} ${holanda}` })
 });
+
+*/
+
 
 
 
